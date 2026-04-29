@@ -7,6 +7,7 @@ document.querySelectorAll("a").forEach(link => {
         const href = this.getAttribute("href");
 
         if (href && !href.startsWith("#")) {
+            if (this.getAttribute("target") === "_blank") return;
             e.preventDefault();
 
             document.body.classList.remove("loaded");
