@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website | Mario Petrov</title>
 
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem("portfolio-lang") || "en";
+            if (savedLang === "bg") {
+                document.documentElement.classList.add("lang-bg");
+                document.documentElement.setAttribute("lang", "bg");
+            }
+        })();
+    </script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
@@ -25,13 +35,18 @@
     <div id="site-nav"></div>
 
     <section class="page">
-        <h1>Website</h1>
+        <h1 lang="en">Website</h1>
+        <h1 lang="bg">Уебсайт</h1>
 
         <div class="project">
-            <h2>Web Design Digital Self-Tutor</h2>
-            <p>
+            <h2 lang="en">Web Design Digital Self-Tutor</h2>
+            <h2 lang="bg">Дигитален самоучител по уеб дизайн</h2>
+            <p lang="en">
                 A comprehensive digital self-tutor for people who want to learn web design at their own pace, created
                 for Module 3: Web Design in Information Technology.
+            </p>
+            <p lang="bg">
+                Изчерпателен дигитален самоучител за хора, които искат да изучават уеб дизайн със свое собствено темпо, създаден по Модул 3: Уеб дизайн по Информационни технологии.
             </p>
 
             <div class="project-content">
@@ -39,11 +54,13 @@
                     <a href="https://mariothexplorer.github.io/it-module3" target="_blank">
                         <img src="assets/images/site.png" alt="Website Screenshot" class="website-img">
                     </a>
-                    <a href="https://mariothexplorer.github.io/it-module3" target="_blank" class="download">Visit
-                        Website</a>
+                    <a href="https://mariothexplorer.github.io/it-module3" target="_blank" class="download">
+                        <span lang="en">Visit Website</span>
+                        <span lang="bg">Посети уебсайта</span>
+                    </a>
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         <strong>What does this module offer?</strong><br>
                         📚 <em>Theoretical Preparation:</em> Detailed lessons covering the planning, designing, and
                         building of websites according to the approved curriculum.<br>
@@ -54,10 +71,17 @@
                         🗂️ <em>Interactive Flashcards:</em> A fast and fun way to memorize basic concepts and
                         terminology through a flashcard system.
                     </p>
+                    <p lang="bg">
+                        <strong>Какво предлага този модул?</strong><br>
+                        📚 <em>Теоретична подготовка:</em> Подробни уроци, покриващи планирането, дизайна и изграждането на уебсайтове съгласно одобрената учебна програма.<br>
+                        🛠️ <em>Практически примери:</em> Реални примери за HTML тагове и CSS свойства, демонстриращи как се стилизират елементи в реално време.<br>
+                        📝 <em>Оценка на знанията:</em> Интерактивни тестове след всеки раздел за затвърждаване на научения материал и подготовка за изпити.<br>
+                        🗂️ <em>Интерактивни флашкарти:</em> Бърз и забавен начин за запомняне на основни понятия и терминология чрез система от карти.
+                    </p>
                 </div>
             </div>
 
-            <p>
+            <p lang="en">
                 <strong>Main Course Sections:</strong><br>
                 1. Website Planning: Defining goals, analyzing the target audience, choosing a domain and hosting.<br>
                 2. Website Design: Information architecture, page design, and graphical modeling.<br>
@@ -66,17 +90,32 @@
                 4. Content Management Systems (CMS): Introduction to the nature, purpose, and architecture of CMS.<br>
                 5. Web Security: Common security problems, protecting CMS sites, and creating backups.
             </p>
+            <p lang="bg">
+                <strong>Основни раздели на курса:</strong><br>
+                1. Планиране на уебсайт: Дефиниране на цели, анализ на целевата аудитория, избор на домейн и хостинг.<br>
+                2. Дизайн на уебсайт: Информационна архитектура, дизайн на страници и графично моделиране.<br>
+                3. Изграждане, тестване и публикуване: Стандарти, HTML5, CSS3, медии, форми, тестване, публикуване и анализ.<br>
+                4. Системи за управление на съдържанието (CMS): Въведение в същността, предназначението и архитектурата на CMS.<br>
+                5. Уеб сигурност: Често срещани проблеми със сигурността, защита на CMS сайтове и създаване на архивни копия.
+            </p>
 
-            <p>
+            <p lang="en">
                 <strong>Why is web design important?</strong><br>
                 In today's digital world, a website is often the first point of contact between an organization and its
                 audience. Good web design isn't just about a "beautiful appearance"; it also encompasses Usability (UX),
                 Responsive Design, Speed, and Accessibility. The skills acquired in this module lay the foundation for
                 professional development in frontend development, UI/UX design, and digital marketing.
             </p>
-            <p>
+            <p lang="bg">
+                <strong>Защо уеб дизайнът е важен?</strong><br>
+                В днешния дигитален свят уебсайтът често е първата точка на контакт между дадена организация и нейната аудитория. Добрият уеб дизайн не е просто „красив външен вид“; той обхваща също така използваемост (UX), адаптивен дизайн, скорост и достъпност. Уменията, придобити в този модул, полагат основите за професионално развитие в сферата на frontend разработката, UI/UX дизайна и дигиталния маркетинг.
+            </p>
+            <p lang="en">
                 <em>Developed by Simona Tsvetanova and myself (students from MG "Geo Milev" - Pleven for the 2025/2026
                     school year), under the supervision of Lyudmila Petkova, our IT teacher.</em>
+            </p>
+            <p lang="bg">
+                <em>Разработено от Симона Цветанова и мен (ученици от МГ „Гео Милев“ - Плевен за учебната 2025/2026 година), под ръководството на Людмила Петкова, наш учител по ИТ.</em>
             </p>
 
         </div>

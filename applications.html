@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Applications | Mario Petrov</title>
 
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem("portfolio-lang") || "en";
+            if (savedLang === "bg") {
+                document.documentElement.classList.add("lang-bg");
+                document.documentElement.setAttribute("lang", "bg");
+            }
+        })();
+    </script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
@@ -18,21 +28,29 @@
 
     <section class="page">
 
-        <h1>Applications</h1>
+        <h1 lang="en">Applications</h1>
+        <h1 lang="bg">Приложения</h1>
 
-        <p class="page-intro">
+        <p class="page-intro" lang="en">
             This section presents applications developed using C# and Windows Forms, focusing on structure, usability,
             and logical problem-solving.
+        </p>
+        <p class="page-intro" lang="bg">
+            Този раздел представя приложения, разработени с C# и Windows Forms, с акцент върху структурата, използваемостта и логическото решаване на проблеми.
         </p>
 
         <!-- PROJECTS -->
         <div class="project">
 
-            <h2>Naming numbers in Bulgarian</h2>
-            <p>
+            <h2 lang="en">Naming numbers in Bulgarian</h2>
+            <h2 lang="bg">Именуване на числа на български</h2>
+            <p lang="en">
                 A C# Windows Forms application which helps foreign students learn numbers from 1 to 9999 in
                 Bulgarian,
                 by typing a number in and choosing if they want to see it written or hear its pronounciation.
+            </p>
+            <p lang="bg">
+                Приложение на C# Windows Forms, което помага на чуждестранни студенти да научат числата от 1 до 9999 на български език, като въведат число и изберат дали искат да го видят изписано, или да чуят неговото произношение.
             </p>
             <div class="project-content">
                 <div class="project-media">
@@ -46,10 +64,13 @@
                     </video>
 
                     <!-- DOWNLOAD -->
-                    <a href="assets/apps/NumberNames.exe" class="download">Download application</a>
+                    <a href="assets/apps/NumberNames.exe" class="download">
+                        <span lang="en">Download application</span>
+                        <span lang="bg">Изтегли приложението</span>
+                    </a>
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         Users are asked to to type in a number. Option 1 allows them to see how this number is written.
                         Option
                         two allows them to hear its pronounciation real time. Option 3 displays the written form of the
@@ -58,20 +79,28 @@
                         number by
                         clicking the button on the right.
                     </p>
+                    <p lang="bg">
+                        От потребителите се изисква да въведат число. Опция 1 им позволява да видят как се пише числото. Опция 2 им позволява да чуят произношението му в реално време. Опция 3 показва писмената форма на числото и едновременно с това възпроизвежда неговото произношение. Потребителите могат да повторят аудио произношението, като кликнат върху бутона вдясно.
+                    </p>
                 </div>
             </div>
-            <p>
+            <p lang="en">
                 This project has helped me improve my logical thinking and problem-solving skills. It has taught me
                 about the structure of the Bulgarian language and how words are formed, following different patterns,
                 depending on the length of the number. Through this process, I developed a deeper understanding of
                 morphological agreement, compound number formation, and linguistic exceptions. Instead of memorizing
                 forms, I learned to see language as a structured system governed by patterns and rules.
-
             </p>
-            <p>
+            <p lang="bg">
+                Този проект ми помогна да подобря логическото си мислене и уменията си за решаване на проблеми. Научи ме на структурата на българския език и на това как се образуват думите по различни модели в зависимост от дължината на числото. Чрез този процес развих по-дълбоко разбиране за морфологичното съгласуване, образуването на съставни числа и езиковите изключения. Вместо просто да запаметявам форми, се научих да виждам езика като структурирана система, управлявана от модели и правила.
+            </p>
+            <p lang="en">
                 I have also learned new C# components and data structures. For example, I learned how to add sound files
                 to a program, how to store them and play them. In addition, I discovered new ways to store and organize
                 data, such as using arrays and lists, which helped me to create a more efficient and organized program.
+            </p>
+            <p lang="bg">
+                Също така научих нови компоненти и структури от данни в C#. Например, научих как да добавям звукови файлове към програма, как да ги съхранявам и възпроизвеждам. Освен това открих нови начини за съхранение и организиране на данни, като използването на масиви и списъци, което ми помогна да създам по-ефективна и организирана програма.
             </p>
 
         </div>
@@ -79,11 +108,15 @@
         <!--Long number calculator-->
         <div class="project">
 
-            <h2>Long number calculator</h2>
-            <p>
+            <h2 lang="en">Long number calculator</h2>
+            <h2 lang="bg">Калкулатор за големи числа</h2>
+            <p lang="en">
                 A C# Windows Forms application designed to add and substract numbers, which are too large to fit
                 in
                 normal numeral variable types.
+            </p>
+            <p lang="bg">
+                Приложение на C# Windows Forms, предназначено за събиране и изваждане на числа, които са твърде големи, за да се поберат в стандартните числови типове променливи.
             </p>
             <div class="project-content">
                 <div class="project-media">
@@ -96,10 +129,13 @@
                     </video>
 
                     <!-- DOWNLOAD -->
-                    <a href="assets/apps/LongNumbersCalculator.exe" class="download">Download application</a>
+                    <a href="assets/apps/LongNumbersCalculator.exe" class="download">
+                        <span lang="en">Download application</span>
+                        <span lang="bg">Изтегли приложението</span>
+                    </a>
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         Users should type in two numbers in the white boxes on the top of the interface. They can choose
                         their
                         desired operation from the drop list on the left of the boxes. Whenever the "=" button is
@@ -108,7 +144,10 @@
                         and use
                         the calculator again.
                     </p>
-                    <p>
+                    <p lang="bg">
+                        Потребителите трябва да въведат две числа в белите полета в горната част на интерфейса. Те могат да изберат желаната операция от падащия списък вляво от кутиите. При натискане на бутона "=" се изчислява резултатът. Бутонът в долната част на формата позволява на потребителите да изчистят всички текстови полета и да използват калкулатора отново.
+                    </p>
+                    <p lang="en">
                         Developing my long number calculator program strengthened my understanding of how computers
                         represent
                         and manipulate numerical data at a fundamental level. Since standard numeric data types cannot
@@ -121,20 +160,29 @@
                         performed on
                         paper.
                     </p>
+                    <p lang="bg">
+                        Разработването на моя калкулатор за големи числа затвърди разбирането ми за това как компютрите представят и обработват числови данни на фундаментално ниво. Тъй като стандартните числови типове данни не могат да съхраняват изключително големи стойности, реализирах собствена логика за обработка на числата цифра по цифра. Това изискваше от мен да преосмисля аритметичните операции от основните принципи: разделяне на числата на отделни знаци, правилното им подравняване и ръчно симулиране на събиране и изваждане по начина, по който се извършват на хартия.
+                    </p>
                 </div>
             </div>
 
-            <p>
+            <p lang="en">
                 From a computer science point of view, the project significantly improved my algorithmic thinking and
                 attention to edge cases. I had to manage carry and borrow operations, handle numbers of different
                 lengths, preserve leading zeros correctly, and ensure accurate results regardless of input size. Working
                 with string-based number representations also strengthened my understanding of data structures, memory
                 limitations, and abstraction.
             </p>
-            <p>
+            <p lang="bg">
+                От гледна точка на компютърните науки, проектът значително подобри алгоритмичното ми мислене и вниманието ми към граничните случаи. Трябваше да управлявам операциите за пренос и заемане, да боравя с числа с различна дължина, да запазвам правилно водещите нули и да гарантирам точни резултати независимо от размера на въведените данни. Работата с текстово представяне на числа също така засили разбирането ми за структури от данни, ограничения на паметта и абстракция.
+            </p>
+            <p lang="en">
                 A future improvement I would like to add is the ability to perform multiplication and
                 division.Additionally, I would like to work on removing the zeroes from the front of the resulting
                 number.
+            </p>
+            <p lang="bg">
+                Бъдещо подобрение, което бих искал да добавя, е възможността за извършване на умножение и деление. Освен това бих искал да работя върху премахването на водещите нули от полученото число.
             </p>
 
         </div>
@@ -142,9 +190,13 @@
         <!--Restaurant-->
         <div class="project">
 
-            <h2>Restaurant orders</h2>
-            <p>
+            <h2 lang="en">Restaurant orders</h2>
+            <h2 lang="bg">Поръчки в ресторант</h2>
+            <p lang="en">
                 A C# Windows Forms application designed to help restaurant businesses complete their orders.
+            </p>
+            <p lang="bg">
+                Приложение на C# Windows Forms, създадено в помощ на ресторантьорския бизнес при изпълнение на поръчки.
             </p>
             <div class="project-content">
                 <div class="project-media">
@@ -157,10 +209,13 @@
                     </video>
 
                     <!-- DOWNLOAD -->
-                    <a href="assets/apps/Restaurant.exe" class="download">Download application</a>
+                    <a href="assets/apps/Restaurant.exe" class="download">
+                        <span lang="en">Download application</span>
+                        <span lang="bg">Изтегли приложението</span>
+                    </a>
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         The interface allows users to choose between two kinds of soups, three main dishes and two
                         desserts.
                         They can see the single price per dish and write in the box what quantity is added to their
@@ -172,21 +227,30 @@
                         paying in cash or by card. Whenever the prder is complete, the bottom button is pressed to
                         finish.
                     </p>
-                    <p>
+                    <p lang="bg">
+                        Интерфейсът позволява на потребителите да избират между два вида супи, три основни ястия и два десерта. Те могат да видят единичната цена за ястие и да запишат в полето какво количество се добавя към поръчката им. Вдясно на интерфейса се показва цялата поръчка с количеството и крайната цена за всеки артикул. Под това потребителите могат да видят общата цена и по желание да добавят бакшиш. Долу вдясно могат да избират между плащане в брой или с карта. Когато поръчката е завършена, долният бутон се натиска за приключване.
+                    </p>
+                    <p lang="en">
                         The development of this application has improved my understanding of different data structures
                         and
                         working with files (stream readers and stream writers). It has also prepared me for work with
                         data
                         bases, information retrieval and complex connections.
                     </p>
+                    <p lang="bg">
+                        Разработването на това приложение подобри разбирането ми за различните структури от данни и работата с файлове (четене и запис на потоци). То ме подготви и за работа с бази данни, извличане на информация и сложни връзки.
+                    </p>
                 </div>
             </div>
 
-            <p>
+            <p lang="en">
                 At the moment, the menu is static. Orders are stored in a text file, which is not very efficient. They
                 are stored only until a new order is created.A future improvement I would work on, is creating a
                 database for the restaurant, so that the orders
                 can be stored and retrieved. This would be crucial for bringing this program to the market
+            </p>
+            <p lang="bg">
+                В момента менюто е статично. Поръчките се съхраняват в текстов файл, което не е много ефективно. Те се пазят само докато се създаде нова поръчка. Бъдещо подобрение, по което бих работил, е създаването на база данни за ресторанта, така че поръчките да могат да се съхраняват и извличат. Това би било от решаващо значение за пускането на тази програма на пазара.
             </p>
 
         </div>
@@ -194,10 +258,14 @@
         <!--Spirki-->
         <div class="project">
 
-            <h2>Pleven Transit Pathfinder</h2>
-            <p>
+            <h2 lang="en">Pleven Transit Pathfinder</h2>
+            <h2 lang="bg">Транспортен навигатор на Плевен</h2>
+            <p lang="en">
                 A C# Windows Forms application that models the Pleven public transit stops as a directed/undirected
                 graph, finding the shortest path between any two points using a Breadth-First Search (BFS) algorithm.
+            </p>
+            <p lang="bg">
+                Приложение на C# Windows Forms, което моделира спирките на градския транспорт в Плевен като насочен/ненасочен граф, намирайки най-краткия път между две точки с помощта на алгоритъм за търсене в ширина (BFS).
             </p>
             <div class="project-content">
                 <div class="project-media">
@@ -207,18 +275,24 @@
                     </video>
 
                     <!-- DOWNLOAD -->
-                    <a href="assets/apps/Spirki.exe" class="download">Download application</a>
+                    <a href="assets/apps/Spirki.exe" class="download">
+                        <span lang="en">Download application</span>
+                        <span lang="bg">Изтегли приложението</span>
+                    </a>
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         The application implements a graphical network of Pleven's city transport. It loads station
                         names from a stop database file and establishes linkages between intersections using adjacency
                         matrices. When the user sets a departure and destination, the application computes the transit
                         route.
                     </p>
+                    <p lang="bg">
+                        Приложението реализира графична мрежа на градския транспорт на Плевен. То зарежда имената на спирките от файл с база данни и установява връзки между кръстовищата чрез матрици на съседство. Когато потребителят зададе отправна точка и дестинация, приложението изчислява маршрута.
+                    </p>
                 </div>
             </div>
-            <p>
+            <p lang="en">
                 Developing this system deepened my understanding of non-linear data structures, particularly graphs
                 (networks), and search algorithms such as Breadth-First Search (BFS). Implementing BFS ensured that
                 the shortest path (in terms of the number of stops) was always identified in an unweighted graph. The
@@ -226,14 +300,21 @@
                 representations, utilizing dictionaries and queues, maintaining traversal state, reconstructing
                 routes through parent-node tracking, and accurately managing node indexing.
             </p>
+            <p lang="bg">
+                Разработването на тази система задълбочи разбирането ми за нелинейни структури от данни, по-специално графи (мрежи), и алгоритми за търсене като търсене в ширина (BFS). Внедряването на BFS гарантира, че най-краткият път (по брой спирки) винаги се идентифицира в непретеглен граф. Проектът също така ми даде практически опит с парсване на файлове със списъци на съседство в графи в паметта, използване на речници и опашки, поддържане на състоянието на прехода, възстановяване на маршрути чрез проследяване на родителски възли и точно управление на индексирането на възлите.
+            </p>
         </div>
 
         <!--Rent A Car-->
         <div class="project">
 
-            <h2>Rent A Car Management System</h2>
-            <p>
+            <h2 lang="en">Rent A Car Management System</h2>
+            <h2 lang="bg">Система за управление на Rent A Car</h2>
+            <p lang="en">
                 A desktop application developed with C# (Windows Forms), Entity Framework, and SQL Server, allowing comprehensive management of vehicle rentals, bookings, and customer databases.
+            </p>
+            <p lang="bg">
+                Настолно приложение, разработено с C# (Windows Forms), Entity Framework и SQL Server, позволяващо цялостно управление на автомобили под наем, резервации и клиентски бази данни.
             </p>
             <div class="project-content">
                 <div class="project-media">
@@ -243,22 +324,37 @@
                     </video>
 
                     <!-- DOWNLOAD -->
-                    <a href="assets/apps/RentACar.zip" class="download">Download application (ZIP)</a>
+                    <a href="assets/apps/RentACar.zip" class="download">
+                        <span lang="en">Download application (ZIP)</span>
+                        <span lang="bg">Изтегли приложението (ZIP)</span>
+                    </a>
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         The Rent A Car Management System enables efficient administration of cars, clients, reservations, brands, categories, fuels, gearboxes, and locations. It implements complete CRUD operations, robust data validation, and advanced filtering and search capabilities. In addition, it features an administrator panel and various reports, including available cars by period, most active clients, most rented cars, and revenue by locations.
                     </p>
-                    <p>
+                    <p lang="bg">
+                        Системата за управление на коли под наем позволява ефективно администриране на автомобили, клиенти, резервации, марки, категории, горива, скоростни кутии и локации. Тя имплементира пълни CRUD операции, стабилна валидация на данни и усъвършенствани възможности за филтриране и търсене. В допълнение, тя включва администраторски панел и различни справки, включително налични автомобили по период, най-активни клиенти, най-наемани автомобили и приходи по локации.
+                    </p>
+                    <p lang="en">
                         This project demonstrates the practical application of relational database design, object-relational mapping (ORM) with Entity Framework, LINQ, and SQL queries to construct a highly functional, data-driven desktop interface.
+                    </p>
+                    <p lang="bg">
+                        Този проект демонстрира практическото приложение на релационен дизайн на бази данни, обектно-релационно картографиране (ORM) с Entity Framework, LINQ и SQL заявки за изграждане на високофункционален настолен интерфейс с данни.
                     </p>
                 </div>
             </div>
-            <p>
+            <p lang="en">
                 Developing this system significantly improved my skills in handling relational databases, writing complex LINQ queries, and designing user-friendly Windows Forms graphical interfaces. Implementing features like available cars by period or revenue analysis by location required careful optimization of queries to ensure fast response times.
             </p>
-            <p>
+            <p lang="bg">
+                Разработването на тази система значително подобри уменията ми за работа с релационни бази данни, писане на сложни LINQ заявки и проектиране на удобни графични интерфейси с Windows Forms. Имплементирането на функции като свободни автомобили за период или анализ на приходите по локация изискваше внимателна оптимизация на заявките за осигуряване на бързо време за реакция.
+            </p>
+            <p lang="en">
                 Furthermore, implementing validation rules for customer information and rental bookings ensured data integrity across the application. The administrator panel allowed me to practice role-based layout styling, state management, and user permissions.
+            </p>
+            <p lang="bg">
+                Освен това, внедряването на правила за валидиране на информацията за клиентите и резервациите за наем гарантира целостта на данните в приложението. Администраторският панел ми позволи да практикувам ролево стилизиране на оформлението, управление на състоянията и потребителски права.
             </p>
         </div>
 

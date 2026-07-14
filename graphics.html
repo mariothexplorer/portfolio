@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graphics | Mario Petrov</title>
 
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem("portfolio-lang") || "en";
+            if (savedLang === "bg") {
+                document.documentElement.classList.add("lang-bg");
+                document.documentElement.setAttribute("lang", "bg");
+            }
+        })();
+    </script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
@@ -18,17 +28,25 @@
 
     <section class="page">
 
-        <h1>Graphics</h1>
+        <h1 lang="en">Graphics</h1>
+        <h1 lang="bg">Графика</h1>
 
-        <p class="page-intro">
+        <p class="page-intro" lang="en">
             A collection of visual projects spanning animation, illustration, and print design.
+        </p>
+        <p class="page-intro" lang="bg">
+            Колекция от визуални проекти, обхващащи анимация, илюстрация и предпечатна подготовка.
         </p>
 
         <!-- Chemistry Animation -->
         <div class="project">
-            <h2>Chemistry Animation</h2>
-            <p>
+            <h2 lang="en">Chemistry Animation</h2>
+            <h2 lang="bg">Химическа анимация</h2>
+            <p lang="en">
                 An animation, visualising the ion exchange reaction between iron and sulfuric acid.
+            </p>
+            <p lang="bg">
+                Анимация, визуализираща реакцията на йонен обмен между желязо и сярна киселина.
             </p>
             <div class="project-content">
                 <div class="project-media">
@@ -38,13 +56,19 @@
                     </video>
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         This animation was created frame by frame in Canva. It taught me the basics of animation and
                         how to create smooth transitions between frames.
                     </p>
-                    <p>
+                    <p lang="bg">
+                        Тази анимация е създадена кадър по кадър в Canva. Тя ме научи на основите на анимацията и как да създавам плавни преходи между кадрите.
+                    </p>
+                    <p lang="en">
                         Thanks to this project I improved my dynamic graphic creating skills and learned the basics of
                         animated videos and how they are created.
+                    </p>
+                    <p lang="bg">
+                        Благодарение на този проект подобрих уменията си за създаване на динамична графика и научих основите на анимираните видеа и начина на тяхното създаване.
                     </p>
                 </div>
             </div>
@@ -53,13 +77,17 @@
 
         <!-- Biology Flipbook -->
         <div class="project">
-            <h2>Biology Flipbook</h2>
-            <p>
+            <h2 lang="en">Biology Flipbook</h2>
+            <h2 lang="bg">Флипбук по биология (Biology Flipbook)</h2>
+            <p lang="en">
                 An interactive digital flipbook containing 2 lessons for new knowledge on the topic of genetics, and one
                 practice lesson, containing interactive exercises that help the students to consolidate their knowledge.
                 The flipbook is designed for an engaging and visual
                 reading
                 experience.
+            </p>
+            <p lang="bg">
+                Интерактивен дигитален флипбук, съдържащ 2 урока за нови знания по темата генетика и един практически урок с интерактивни упражнения, които помагат на учениците да затвърдят знанията си. Книгата е проектирана за ангажиращо и визуално изживяване при четене.
             </p>
             <div class="project-content">
                 <div class="project-media">
@@ -68,19 +96,28 @@
                         style="border: 1px solid lightgray; width: 100%; max-width: 500px; height: 364px; display: block; margin: 2rem auto;"></iframe>
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         The first stage was to create a pdf version of the students book. I created the design, layout
                         and all images from scratch in Canva.
                     </p>
-                    <p>
+                    <p lang="bg">
+                        Първият етап беше създаването на PDF версия на учебника. Създадох дизайна, оформлението и всички изображения от нулата в Canva.
+                    </p>
+                    <p lang="en">
                         The second stage was to create an interactive flipbook from the pdf version. I used Heyzine to
                         create an interactive flipbook from the pdf version.
                     </p>
-                    <p>
+                    <p lang="bg">
+                        Вторият етап беше създаването на интерактивен флипбук от PDF версията. Използвах Heyzine, за да генерирам интерактивния флипбук.
+                    </p>
+                    <p lang="en">
                         The third stage was to create interactive exercises for the practice lesson. I used a dedicated
                         educational software, called learningapps.org, to create interactive exercises for the practice
                         lesson. The exercises can be opened directly in the flipbook, or in a new window in order to be
                         full-screen.
+                    </p>
+                    <p lang="bg">
+                        Третият етап беше създаването на интерактивни упражнения за практическия урок. Използвах специализиран образователен софтуер learningapps.org. Упражненията могат да се отварят директно във флипбука или в нов прозорец на цял екран.
                     </p>
                 </div>
             </div>
@@ -90,11 +127,15 @@
 
         <!-- Mountain Vector -->
         <div class="project">
-            <h2>Mountain Illustration</h2>
-            <p>
+            <h2 lang="en">Mountain Illustration</h2>
+            <h2 lang="bg">Планинска илюстрация</h2>
+            <p lang="en">
                 A vector landscape illustration created with precision and a clean aesthetic, showcasing skills
                 in
                 digital illustration.
+            </p>
+            <p lang="bg">
+                Векторна пейзажна илюстрация, създадена с прецизност и изчистена естетика, показваща умения в дигиталната илюстрация.
             </p>
             <div class="project-content">
                 <div class="project-media">
@@ -102,17 +143,23 @@
                         style="max-width: 100%; display: block; margin: 2rem auto;">
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         By creating this image, I developed a strong understanding of vector-based design principles. I
                         learned how Bézier curves, nodes, paths, and layers work together to form scalable graphics, and
                         how shapes can be constructed and refined with precision. Working with gradients, opacity, and
                         path operations (union, difference, intersection) helped me understand how complex visuals are
                         built from simple geometric elements.
                     </p>
-                    <p>
+                    <p lang="bg">
+                        Създавайки това изображение, развих добро разбиране за принципите на векторния дизайн. Научих как кривите на Безие, възлите, пътищата и слоевете работят заедно за формиране на мащабируема графика и как формите могат да бъдат изградени и детайлизирани с прецизност. Работата с градиенти, непрозрачност и операции с пътища (обединение, разлика, сечение) ми помогна да разбера как се изграждат сложни визуални ефекти от прости геометрични елементи.
+                    </p>
+                    <p lang="en">
                         This process also strengthened my sense of composition, color harmony, and visual depth. Beyond
                         design skills, I improved my patience and attention to detail, as vector illustration requires
                         iterative refinement and deliberate control over every anchor point.
+                    </p>
+                    <p lang="bg">
+                        Този процес също така засили усещането ми за композиция, цветова хармония и визуална дълбочина. Извън дизайнерските умения, подобрих търпението и вниманието си към детайла, тъй като векторната илюстрация изисква постоянно усъвършенстване и съзнателен контрол върху всяка опорна точка.
                     </p>
                 </div>
             </div>

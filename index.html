@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mario Petrov | Portfolio</title>
 
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem("portfolio-lang") || "en";
+            if (savedLang === "bg") {
+                document.documentElement.classList.add("lang-bg");
+                document.documentElement.setAttribute("lang", "bg");
+            }
+        })();
+    </script>
+
     <!-- Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap"
@@ -30,21 +40,40 @@
         <div class="hero-text">
 
           <!--  <p class="label">ARTIFICIAL INTELLIGENCE STUDENT</p>-->
-            <h1>Mario Petrov</h1>
+            <h1 lang="en">Mario Petrov</h1>
+            <h1 lang="bg">Марио Петров</h1>
 
-            <p class="description">
+            <p class="description" lang="en">
                 I am a student passionate about artificial intelligence and the connection between computational systems
                 and human cognition. My work combines programming, mathematics, and digital design to explore how
                 intelligent systems can be structured, understood, and applied.
             </p>
+            <p class="description" lang="bg">
+                Аз съм студент с интерес към изкуствения интелект и връзката между изчислителните системи и човешкото познание. Моята работа съчетава програмиране, математика и дигитален дизайн с цел изследване на това как интелигентните системи могат да бъдат структурирани, разбирани и прилагани.
+            </p>
 
             <!-- CIRCLES -->
             <div class="circle-buttons">
-                <a class="circle lavender" href="applications.html">Applications</a>
-                <a class="circle blue" href="games.html">Games</a>
-                <a class="circle pink" href="webapp.html">Web App</a>
-                <a class="circle green" href="websites.html">Website</a>
-                <a class="circle slate" href="graphics.html">Graphics</a>
+                <a class="circle lavender" href="applications.html">
+                    <span lang="en">Applications</span>
+                    <span lang="bg">Приложения</span>
+                </a>
+                <a class="circle blue" href="games.html">
+                    <span lang="en">Games</span>
+                    <span lang="bg">Игри</span>
+                </a>
+                <a class="circle pink" href="webapp.html">
+                    <span lang="en">Web App</span>
+                    <span lang="bg">Уеб апликация</span>
+                </a>
+                <a class="circle green" href="websites.html">
+                    <span lang="en">Website</span>
+                    <span lang="bg">Сайт</span>
+                </a>
+                <a class="circle slate" href="graphics.html">
+                    <span lang="en">Graphics</span>
+                    <span lang="bg">Графика</span>
+                </a>
             </div>
 
         </div>

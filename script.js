@@ -10,18 +10,22 @@ function renderSiteShell() {
     const currentPage = getCurrentPage();
 
     const pages = [
-        { file: "index.html", label: "Home" },
-        { file: "applications.html", label: "Applications" },
-        { file: "games.html", label: "Games" },
-        { file: "webapp.html", label: "Web App" },
-        { file: "websites.html", label: "Website" },
-        { file: "graphics.html", label: "Graphics" }
+        { file: "index.html", labelEn: "Home", labelBg: "Начало" },
+        { file: "applications.html", labelEn: "Applications", labelBg: "Приложения" },
+        { file: "games.html", labelEn: "Games", labelBg: "Игри" },
+        { file: "webapp.html", labelEn: "Web App", labelBg: "Уеб апликация" },
+        { file: "websites.html", labelEn: "Website", labelBg: "Сайт" },
+        { file: "graphics.html", labelEn: "Graphics", labelBg: "Графика" }
     ];
 
     if (navTarget) {
+        const currentLang = localStorage.getItem("portfolio-lang") || "en";
         navTarget.innerHTML = `
             <nav class="navbar">
-                <a class="logo" href="index.html">Mario Petrov</a>
+                <a class="logo" href="index.html">
+                    <span lang="en">Mario Petrov</span>
+                    <span lang="bg">Марио Петров</span>
+                </a>
                 <button class="hamburger" id="hamburger-menu" aria-label="Toggle Navigation">
                     <span></span>
                     <span></span>
@@ -29,8 +33,19 @@ function renderSiteShell() {
                 </button>
                 <div class="nav-links" id="nav-links">
                     ${pages.map(page => `
-                        <a href="${page.file}" class="nav-link${currentPage === page.file ? " active" : ""}"${currentPage === page.file ? ' aria-current="page"' : ""}>${page.label}</a>
+                        <a href="${page.file}" class="nav-link${currentPage === page.file ? " active" : ""}"${currentPage === page.file ? ' aria-current="page"' : ""}>
+                            <span lang="en">${page.labelEn}</span>
+                            <span lang="bg">${page.labelBg}</span>
+                        </a>
                     `).join("")}
+                    <div class="lang-switcher">
+                        <button class="lang-btn${currentLang === 'en' ? ' active' : ''}" id="lang-btn-en" aria-label="Switch to English">
+                            <img src="assets/images/flag_uk.svg" alt="English">
+                        </button>
+                        <button class="lang-btn${currentLang === 'bg' ? ' active' : ''}" id="lang-btn-bg" aria-label="Switch to Bulgarian">
+                            <img src="assets/images/flag_bg.svg" alt="Bulgarian">
+                        </button>
+                    </div>
                 </div>
             </nav>
         `;
@@ -52,15 +67,75 @@ function renderSiteShell() {
                 }
             });
         }
+
+        const btnEn = document.getElementById("lang-btn-en");
+        const btnBg = document.getElementById("lang-btn-bg");
+
+        function updateLangUI(lang) {
+            localStorage.setItem("portfolio-lang", lang);
+            if (lang === "bg") {
+                document.documentElement.classList.add("lang-bg");
+                document.documentElement.setAttribute("lang", "bg");
+                btnBg.classList.add("active");
+                btnEn.classList.remove("active");
+            } else {
+                document.documentElement.classList.remove("lang-bg");
+                document.documentElement.setAttribute("lang", "en");
+                btnEn.classList.add("active");
+                btnBg.classList.remove("active");
+            }
+            updatePageTitle(lang);
+        }
+
+        if (btnEn && btnBg) {
+            btnEn.addEventListener("click", () => updateLangUI("en"));
+            btnBg.addEventListener("click", () => updateLangUI("bg"));
+        }
     }
 
     if (footerTarget) {
-        footerTarget.innerHTML = "&copy; Mario Petrov | Artificial Intelligence aspiring AI student";
+        footerTarget.innerHTML = `
+            <span lang="en">&copy; Mario Petrov</span>
+            <span lang="bg">&copy; Марио Петров</span>
+        `;
+    }
+}
+
+function updatePageTitle(lang) {
+    const pages = [
+        { file: "index.html", labelEn: "Portfolio", labelBg: "Портфолио" },
+        { file: "applications.html", labelEn: "Applications", labelBg: "Приложения" },
+        { file: "games.html", labelEn: "Games", labelBg: "Игри" },
+        { file: "webapp.html", labelEn: "Web App", labelBg: "Уеб апликация" },
+        { file: "websites.html", labelEn: "Website", labelBg: "Сайт" },
+        { file: "graphics.html", labelEn: "Graphics", labelBg: "Графика" }
+    ];
+    const currentPage = getCurrentPage();
+    const pageObj = pages.find(p => p.file === currentPage);
+    if (pageObj) {
+        if (currentPage === "index.html") {
+            document.title = lang === "bg" ? "Марио Петров | Портфолио" : "Mario Petrov | Portfolio";
+        } else {
+            document.title = lang === "bg" 
+                ? `${pageObj.labelBg} | Марио Петров` 
+                : `${pageObj.labelEn} | Mario Petrov`;
+        }
     }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Sync language state on DOM load
+    const savedLang = localStorage.getItem("portfolio-lang") || "en";
+    if (savedLang === "bg") {
+        document.documentElement.classList.add("lang-bg");
+        document.documentElement.setAttribute("lang", "bg");
+    } else {
+        document.documentElement.classList.remove("lang-bg");
+        document.documentElement.setAttribute("lang", "en");
+    }
+
     renderSiteShell();
+    updatePageTitle(savedLang);
     document.body.classList.add("loaded");
     scalePhone();
 

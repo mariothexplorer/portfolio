@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games | Mario Petrov</title>
 
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem("portfolio-lang") || "en";
+            if (savedLang === "bg") {
+                document.documentElement.classList.add("lang-bg");
+                document.documentElement.setAttribute("lang", "bg");
+            }
+        })();
+    </script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
@@ -18,20 +28,28 @@
 
     <section class="page">
 
-        <h1>Games</h1>
+        <h1 lang="en">Games</h1>
+        <h1 lang="bg">Игри</h1>
 
-        <p class="page-intro">
+        <p class="page-intro" lang="en">
             These projects are interactive games developed in C#, focusing on logic, user engagement, and structured
             problem-solving. They demonstrate my ability to create dynamic systems that respond to user input in real
             time.
+        </p>
+        <p class="page-intro" lang="bg">
+            Тези проекти са интерактивни игри, разработени на C#, фокусирани върху логиката, ангажираността на потребителите и структурираното решаване на проблеми. Те демонстрират способността ми да създавам динамични системи, които реагират на потребителските действия в реално време.
         </p>
 
         <!-- PROJECTS -->
         <div class="project">
             <!--Flappy Bird-->
-            <h2>Flappy Bird</h2>
-            <p>
+            <h2 lang="en">Flappy Bird</h2>
+            <h2 lang="bg">Flappy Bird</h2>
+            <p lang="en">
                 A C# Windows Forms game, which is a recreation of the popular game Flappy Bird.
+            </p>
+            <p lang="bg">
+                Игра на C# Windows Forms, която е пресъздаване на популярната игра Flappy Bird.
             </p>
             <div class="project-content flappy-content">
                 <div class="project-media">
@@ -45,10 +63,13 @@
                     </video>
 
                     <!-- DOWNLOAD -->
-                    <a href="assets/apps/FlappyBird.exe" class="download flappy-download">Download application</a>
+                    <a href="assets/apps/FlappyBird.exe" class="download flappy-download">
+                        <span lang="en">Download application</span>
+                        <span lang="bg">Изтегли приложението</span>
+                    </a>
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         Users can make the bird jump by pressing the space bar. The goal is to avoid the pipes and get
                         the
                         highest score possible. The highest the score, the faster the bird flies forwards. The game
@@ -57,7 +78,10 @@
                         screen and ends when the bird
                         collides with a pipe or the ground. The score is displayed at the bottom of the screen.
                     </p>
-                    <p>
+                    <p lang="bg">
+                        Потребителите могат да накарат птицата да скочи, като натиснат интервала (space bar). Целта е да се избегнат тръбите и да се постигне възможно най-висок резултат. Колкото по-висок е резултатът, толкова по-бързо лети птицата напред. Играта започва, когато потребителят натисне дългия бутон в долната част на екрана, и завършва, когато птицата се сблъска с тръба или със земята. Резултатът се показва в долната част на екрана.
+                    </p>
+                    <p lang="en">
                         Building this game has strengthened my understanding of real-time logic, physics simulation, and
                         event-driven programming. I implemented gravity, collision detection, and score tracking from
                         scratch,
@@ -67,16 +91,22 @@
                         affect user
                         experience.
                     </p>
+                    <p lang="bg">
+                        Създаването на тази игра засили разбирането ми за логика в реално време, симулация на физика и събитийно-ориентирано програмиране. Внедрих гравитация, разпознаване на сблъсъци и проследяване на резултата от нулата, което изискваше прецизен контрол върху движението, времето и потребителския вход. Проектирането на плавен геймплей ме научи как малки математически корекции, като промени в скоростта и актуализации на кадрите, влияят пряко на потребителското изживяване.
+                    </p>
 
                 </div>
             </div>
 
-            <p>
+            <p lang="en">
                 From a development perspective, the project improved my ability to structure interactive systems
                 and
                 manage game states such as start, play, and game over. Additionally, I retouched my dinamic
                 graphic
                 creating skills in windows forms applications.
+            </p>
+            <p lang="bg">
+                От гледна точка на разработката, проектът подобри способността ми да структурирам интерактивни системи и да управлявам състояния на играта като старт, игра и край (game over). Освен това подобрих уменията си за създаване на динамична графика в приложения с Windows Forms.
             </p>
 
         </div>
@@ -84,10 +114,14 @@
         <!--Bulgarian provinces-->
         <div class="project">
 
-            <h2>Learn provinces in Bulgaria</h2>
-            <p>
+            <h2 lang="en">Learn provinces in Bulgaria</h2>
+            <h2 lang="bg">Научи областите в България</h2>
+            <p lang="en">
                 A C# Windows Forms application that helps users learn the provinces of Bulgaria while playing a
                 game.
+            </p>
+            <p lang="bg">
+                Приложение на C# Windows Forms, което помага на потребителите да научат областите на България, докато играят игра.
             </p>
             <div class="project-content">
                 <div class="project-media">
@@ -100,10 +134,13 @@
                     </video>
 
                     <!-- DOWNLOAD -->
-                    <a href="assets/apps/BulgariaCountys.exe" class="download">Download application</a>
+                    <a href="assets/apps/BulgariaCountys.exe" class="download">
+                        <span lang="en">Download application</span>
+                        <span lang="bg">Изтегли приложението</span>
+                    </a>
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         Users are presented with a map of Bulgaria with all the provinces outlined. On its left they are
                         presented with the name of each province. The goal of the game is to match each province with
                         its name
@@ -114,9 +151,12 @@
                         ends when all
                         provinces are matched correctly.The time is displayed at the top left of the screen.
                     </p>
+                    <p lang="bg">
+                        На потребителите се представя карта на България с очертани всички области. Вляво от нея се показва името на всяка област. Целта на играта е да се свърже всяка област с нейното име, като се кликне върху областта в списъка и се плъзне до нейното местоположение. Ако е направена грешка, играчът може да я коригира чрез двойно кликване върху грешното име на област, за да я премахне от картата. Играта приключва, когато всички области са правилно съпоставени. Времето се показва в горния ляв ъгъл на екрана.
+                    </p>
                 </div>
             </div>
-            <p>
+            <p lang="en">
                 This game deepened my understanding of interactive user interfaces and event-driven programming. The
                 process reinforced my knowledge of connecting data structures (like the list of provinces) with visual
                 elements, and managing state changes in response to user interactions, which is a core concept in
@@ -125,17 +165,24 @@
                 for correct or incorrect placements. This project strengthened my skills in problem-solving, debugging,
                 and designing software that is both functional and intuitive for learners.
             </p>
+            <p lang="bg">
+                Тази игра задълбочи разбирането ми за интерактивни потребителски интерфейси и събитийно-ориентирано програмиране. Процесът затвърди знанията ми за свързване на структури от данни (като списъка с области) с визуални елементи и управление на промените в състоянието в отговор на потребителски взаимодействия, което е основна концепция при изграждането на адаптивни приложения. Като картографирах градовете спрямо правилните им места на картата, практикувах пространствено мислене в програмирането и разсъждавах критично за потребителското изживяване, като например осигуряване на обратна връзка при правилно или неправилно разположение. Този проект засили уменията ми за решаване на проблеми, дебъгване и проектиране на софтуер, който е едновременно функционален и интуитивен за учащите.
+            </p>
 
         </div>
 
         <!--Puzzle-->
         <div class="project">
 
-            <h2>Puzzle</h2>
-            <p>
+            <h2 lang="en">Puzzle</h2>
+            <h2 lang="bg">Пъзел</h2>
+            <p lang="en">
                 A C# Windows Forms application which challenges players by asking them to match squares in order
                 to
                 create a picture.
+            </p>
+            <p lang="bg">
+                Приложение на C# Windows Forms, което предизвиква играчите да подреждат квадратчета, за да създадат картина.
             </p>
             <div class="project-content">
                 <div class="project-media">
@@ -148,10 +195,13 @@
                     </video>
 
                     <!-- DOWNLOAD -->
-                    <a href="assets/apps/PuzzleOcean.exe" class="download">Download application</a>
+                    <a href="assets/apps/PuzzleOcean.exe" class="download">
+                        <span lang="en">Download application</span>
+                        <span lang="bg">Изтегли приложението</span>
+                    </a>
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         Each time the app is started, the puzzle pieces are shuffled. The goal is to put them back in
                         order to
                         create the original picture. To start the game players need to click the button at the bottom
@@ -165,9 +215,12 @@
                         puzzle is
                         not solved correctly.
                     </p>
+                    <p lang="bg">
+                        Всеки път, когато приложението се стартира, частите на пъзела се разбъркват. Целта е да бъдат подредени отново, за да се получи оригиналната картина. За да стартират играта, играчите трябва да кликнат върху бутона в долния ляв ъгъл. За да местят парчетата, играчите трябва да кликнат върху парчето, което искат да преместят, и да го плъзнат до желаното му местоположение. Ако е направена грешка, тя може да бъде коригирана чрез двойно кликване върху неправилното парче и преместването му. Играта завършва, когато играчът кликне върху бутона долу вдясно. Ако пъзелът е сглобен правилно, се показва поздравление. В противен случай се показва съобщение, че пъзелът не е подреден правилно.
+                    </p>
                 </div>
             </div>
-            <p>
+            <p lang="en">
                 While developing this game, I strengthened my understanding of dynamic game logic and state management.
                 Implementing the piece shuffle functionality taught me how to randomize elements while preserving the
                 underlying structure needed to reconstruct the original image. I learned how to generate different
@@ -178,57 +231,87 @@
                 algorithmic thinking, especially in tracking correct placements and detecting completion, while also
                 sharpening my focus on user experience and game flow.
             </p>
+            <p lang="bg">
+                Докато разработвах тази игра, засилих разбирането си за динамична игрова логика и управление на състояния. Реализирането на функцията за разбъркване на парчетата ме научи как да рандомизирам елементи, запазвайки същевременно базовата структура, необходима за възстановяване на оригиналното изображение. Научих се как да генерирам различни начални конфигурации при всяко стартиране на играта, осигурявайки разнообразие, без да се нарушава възможността за решаване на пъзела. Също така задълбочих знанията си за обработка на събития и взаимодействие между обекти в графичен интерфейс. Управлението на избора на парчета, влаченето, откриването на сблъсъци и фиксирането им на правилните позиции изискваше прецизен контрол над координати и условия. Този проект подобри алгоритмичното ми мислене, особено при проследяване на правилните разположения и засичане на крайния резултат, като съвеременно и изостри фокуса ми върху потребителското изживяване и игровия процес.
+            </p>
 
         </div>
 
         <!--Lithium Cat-->
         <div class="project">
 
-            <h2>Lithium The Cat</h2>
-            <p>
+            <h2 lang="en">Lithium The Cat</h2>
+            <h2 lang="bg">Котката Литий</h2>
+            <p lang="en">
                 A 2D action-adventure game with puzzle elements that combines dynamic gameplay with a classic dungeon
                 crawler experience in a post-apocalyptic world.
+            </p>
+            <p lang="bg">
+                2D екшън-приключенска игра с пъзел елементи, която съчетава динамичен геймплей с класическо преживяване от типа dungeon crawler в постапокалиптичен свят.
             </p>
             <div class="project-content">
                 <div class="project-media">
                     <!-- VIDEO -->
-                    <video controls class="project-video">
-                        <source src="assets/videos/Trailer_EN.mp4" type="video/mp4">
-                    </video>
+                    <div lang="en">
+                        <video controls class="project-video">
+                            <source src="assets/videos/Trailer_EN.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div lang="bg">
+                        <video controls class="project-video">
+                            <source src="assets/videos/Trailer_BG.mp4" type="video/mp4">
+                        </video>
+                    </div>
 
                     <!-- DOWNLOAD -->
-                    <a href="assets/apps/Lithium_the_cat_1.4.exe" class="download">Download application</a>
+                    <a href="assets/apps/Lithium_the_cat_1.4.exe" class="download">
+                        <span lang="en">Download application</span>
+                        <span lang="bg">Изтегли приложението</span>
+                    </a>
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         "Lithium The Cat" is a game developed for the National Olympiad in Information Technology in
                         collaboration with a schoolmate. The game is designed for young children (first and second
                         grade) to help them develop keyboard and mouse skills, quick reactions, and logical thinking in
                         a fun and accessible way, proving that learning is most effective when it happens through play.
                     </p>
-                    <p>
+                    <p lang="bg">
+                        "Котката Литий" е игра, разработена за Националната олимпиада по информационни технологии в сътрудничество с училищен колега. Играта е предназначена за малки деца (първи и втори клас), за да им помогне да развият умения за работа с клавиатура и мишка, бързи реакции и логическо мислене по забавен и достъпен начин, доказвайки, че ученето е най-ефективно, когато се случва чрез игра.
+                    </p>
+                    <p lang="en">
                         In the game, players collect coins, solve puzzles, and face various monsters. It features a
                         modular architecture, including gameplay, UI, and audio modules. The development process
                         involved designing the main character (Lithium Cat), creating different types of enemies with
                         unique behaviors, and programming core mechanics like player movement, combat, and dynamic
                         camera tracking.
                     </p>
+                    <p lang="bg">
+                        В играта играчите събират монети, решават пъзели и се изправят срещу различни чудовища. Тя има модулна архитектура, включваща модули за геймплей, потребителски интерфейс и звук. Процесът на разработка включваше проектиране на главния герой (котката Литий), създаване на различни видове врагове с уникално поведение и програмиране на основни механики като движение на играча, битка и динамично проследяване с камерата.
+                    </p>
                 </div>
             </div>
-            <p>
+            <p lang="en">
                 Creating this game was a significant challenge that encompassed graphics, sound, programming, and user
                 interface design. It required mastering the GameMaker environment, integrating multiple menus, and
                 balancing the game's difficulty. Solving technical issues, such as screen scaling bugs, further improved
                 my problem-solving skills and ability to utilize community resources for debugging.
+            </p>
+            <p lang="bg">
+                Създаването на тази игра беше сериозно предизвикателство, което обхвана графика, звук, програмиране и дизайн на потребителския интерфейс. То изискваше усвояване на средата GameMaker, интегриране на множество менюта и балансиране на трудността на играта. Решаването на технически проблеми, като грешки при мащабирането на екрана, допълнително подобри уменията ми за решаване на проблеми и способността ми да използвам общностни ресурси за дебъгване.
             </p>
 
         </div>
 
         <!--Nim Game-->
         <div class="project">
-            <h2>Nim Game</h2>
-            <p>
+            <h2 lang="en">Nim Game</h2>
+            <h2 lang="bg">Играта Ним</h2>
+            <p lang="en">
                 A classic two-player strategy game developed in C# as a Windows Forms application.
+            </p>
+            <p lang="bg">
+                Класическа стратегическа игра за двама играчи, разработена на C# като приложение на Windows Forms.
             </p>
             <div class="project-content">
                 <div class="project-media">
@@ -238,35 +321,50 @@
                     </video>
 
                     <!-- DOWNLOAD -->
-                    <a href="assets/apps/NimGame.exe" class="download">Download application</a>
+                    <a href="assets/apps/NimGame.exe" class="download">
+                        <span lang="en">Download application</span>
+                        <span lang="bg">Изтегли приложението</span>
+                    </a>
                 </div>
                 <div class="project-text">
-                    <p>
+                    <p lang="en">
                         Nim Game is a classic two-player strategy game played with several piles of objects. At the
                         beginning of the game, the user chooses the number of piles and enters the number of objects in
                         each pile. The game then starts, and the user competes against the computer.
                     </p>
-                    <p>
+                    <p lang="bg">
+                        Играта Ним е класическа стратегическа игра за двама играчи, която се играе с няколко купчини предмети. В началото на играта потребителят избира броя купчини и въвежда броя предмети във всяка от тях. След това играта започва и потребителят се състезава срещу компютъра.
+                    </p>
+                    <p lang="en">
                         On each turn, the player selects one pile and removes one or more objects from it. The player
                         can remove any positive number of objects, but only from a single pile during their turn, and
                         they cannot remove more objects than the selected pile contains. After the player's move, the
                         computer automatically makes its move by choosing a pile and removing some of its objects.
                     </p>
-                    <p>
+                    <p lang="bg">
+                        На всеки ход играчът избира една купчина и премахва един или повече предмети от нея. Играчът може да премахне произволен положителен брой предмети, но само от една купчина по време на своя ход, и не може да премахне повече предмети, отколкото съдържа избраната купчина. След хода на играча компютърът автоматично прави своя ход, като избира купчина и премахва част от нейните предмети.
+                    </p>
+                    <p lang="en">
                         The game continues with the player and the computer taking turns until all objects have been
                         removed from the piles. The winner is the player who takes the last remaining object. At the end
                         of the game, the application displays a message indicating whether the player or the computer
                         has won. The program also validates all user input and displays error messages whenever invalid
                         data is entered, such as non-integer values or an invalid number of objects.
                     </p>
+                    <p lang="bg">
+                        Играта продължава с редуване на ходовете на играча и компютъра, докато всички предмети бъдат отстранени от купчините. Победител е играчът, който вземе последния останал предмет. В края на играта приложението показва съобщение, указващо дали играчът или компютърът е спечелил. Програмата също така валидира целия потребителски вход и показва съобщения за грешка при въвеждане на невалидни данни, като нецели стойности или невалиден брой предмети.
+                    </p>
                 </div>
             </div>
-            <p>
+            <p lang="en">
                 This implementation incorporates a game theory artificial intelligence that plays optimally based on
                 the game's mathematical principles. By analyzing the XOR-sum of all piles (known as the Nim-sum), the
                 computer identifies winning configurations. Building the original C# Windows Forms application helped
                 refine skills in object-oriented state management, real-time GUI rendering, event delegation, and
                 algorithm design.
+            </p>
+            <p lang="bg">
+                Тази реализация включва изкуствен интелект, базиран на теория на игрите, който играе оптимално съгласно математическите принципи на играта. Чрез анализиране на XOR-сумата на всички купчини (известна като Ним-сума), компютърът идентифицира печеливши конфигурации. Създаването на оригиналното C# Windows Forms приложение помогна за усъвършенстване на уменията в обектно-ориентираното управление на състоянията, GUI рендерирането в реално време, делегирането на събития и дизайна на алгоритми.
             </p>
         </div>
 
