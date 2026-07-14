@@ -110,7 +110,7 @@ function scalePhone() {
     // Apply centering and positioning inline to prevent browser caching of external CSS
     phone.style.position = "absolute";
     phone.style.left = "50%";
-    phone.style.top = "0";
+    phone.style.top = isMobile ? "0" : "-100px";
     phone.style.transform = `translateX(-50%) scale(${scale})`;
     phone.style.transformOrigin = "top center";
 
@@ -120,7 +120,8 @@ function scalePhone() {
         wrapper.style.position = "relative";
         wrapper.style.overflow = isMobile ? "hidden" : "visible";
         wrapper.style.borderRadius = "55px";
-        wrapper.style.height = `${baseHeight * scale}px`;
+        const shiftOffset = isMobile ? 0 : 100;
+        wrapper.style.height = `${(baseHeight * scale) - shiftOffset}px`;
         wrapper.style.width = `${baseWidth * scale}px`;
     }
 }

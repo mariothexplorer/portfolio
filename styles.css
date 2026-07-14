@@ -317,11 +317,11 @@ body.loaded {
 
 .webapp-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 60px;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 /* Phone wrapper */
@@ -358,20 +358,15 @@ body.loaded {
 
 /* Description */
 .webapp-text-column {
-    max-width: 450px;
+    max-width: 700px;
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.webapp-text-column h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-
 .webapp-text-column p {
     color: #94a3b8;
+    font-size: 15px;
     margin-bottom: 20px;
     line-height: 1.6;
 }
@@ -647,12 +642,6 @@ img, video, iframe {
         max-width: 480px;
     }
 
-    .webapp-intro h1 {
-        font-family: 'Playfair Display', serif;
-        font-size: 32px;
-        margin-bottom: 12px;
-    }
-
     .webapp-intro p {
         color: #94a3b8;
         line-height: 1.6;
@@ -717,5 +706,15 @@ img, video, iframe {
         width: 68px;
         height: 68px;
         font-size: 11px;
+    }
+}
+
+/* Reduce bottom padding and footer margin specifically for webapp page on desktop */
+@media (min-width: 769px) {
+    .webapp-page {
+        padding-bottom: 20px;
+    }
+    .webapp-page + .footer {
+        margin-top: 10px;
     }
 }
