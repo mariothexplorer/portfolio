@@ -668,6 +668,7 @@ img, video, iframe {
         overflow: hidden; /* Crucial: crops unscaled width of iphone-frame to prevent zoom-out/pinch issues */
         margin: 15px auto;
         border-radius: 55px; /* Clean match for container boundary */
+        max-width: 100%;
     }
 
     .webapp-details {

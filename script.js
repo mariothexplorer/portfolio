@@ -107,11 +107,19 @@ function scalePhone() {
 
     const scale = isMobile ? Math.min(scaleByWidth, 1) : Math.min(scaleByHeight, scaleByWidth, 1);
 
+    // Apply centering and positioning inline to prevent browser caching of external CSS
+    phone.style.position = "absolute";
+    phone.style.left = "50%";
+    phone.style.top = "0";
     phone.style.transform = `translateX(-50%) scale(${scale})`;
     phone.style.transformOrigin = "top center";
 
     const wrapper = phone.parentElement;
     if (wrapper) {
+        wrapper.style.flex = "none";
+        wrapper.style.position = "relative";
+        wrapper.style.overflow = isMobile ? "hidden" : "visible";
+        wrapper.style.borderRadius = "55px";
         wrapper.style.height = `${baseHeight * scale}px`;
         wrapper.style.width = `${baseWidth * scale}px`;
     }
@@ -119,4 +127,10 @@ function scalePhone() {
 
 window.addEventListener("load", scalePhone);
 window.addEventListener("resize", scalePhone);
+window.addEventListener("pageshow", scalePhone);
+document.addEventListener("readystatechange", () => {
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        scalePhone();
+    }
+});
 scalePhone();
