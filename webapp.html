@@ -6,12 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web App | Mario Petrov</title>
 
+    <style>
+        html:not(.lang-bg) [lang="bg"] {
+            display: none !important;
+        }
+        html.lang-bg [lang="en"] {
+            display: none !important;
+        }
+    </style>
     <script>
         (function() {
-            const savedLang = localStorage.getItem("portfolio-lang") || "en";
-            if (savedLang === "bg") {
-                document.documentElement.classList.add("lang-bg");
-                document.documentElement.setAttribute("lang", "bg");
+            try {
+                const savedLang = localStorage.getItem("portfolio-lang") || "en";
+                if (savedLang === "bg") {
+                    document.documentElement.classList.add("lang-bg");
+                    document.documentElement.setAttribute("lang", "bg");
+                }
+            } catch (e) {
+                console.warn("Storage access restricted:", e);
             }
         })();
     </script>

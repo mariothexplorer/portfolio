@@ -19,18 +19,20 @@ function renderSiteShell() {
     ];
 
     if (navTarget) {
-        const currentLang = localStorage.getItem("portfolio-lang") || "en";
+        let currentLang = "en";
+        try {
+            currentLang = localStorage.getItem("portfolio-lang") || "en";
+        } catch (e) {
+            console.warn("Storage access restricted on load:", e);
+        }
+
         navTarget.innerHTML = `
             <nav class="navbar">
                 <a class="logo" href="index.html">
                     <span lang="en">Mario Petrov</span>
                     <span lang="bg">Марио Петров</span>
                 </a>
-                <button class="hamburger" id="hamburger-menu" aria-label="Toggle Navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                
                 <div class="nav-links" id="nav-links">
                     ${pages.map(page => `
                         <a href="${page.file}" class="nav-link${currentPage === page.file ? " active" : ""}"${currentPage === page.file ? ' aria-current="page"' : ""}>
@@ -38,6 +40,9 @@ function renderSiteShell() {
                             <span lang="bg">${page.labelBg}</span>
                         </a>
                     `).join("")}
+                </div>
+
+                <div class="nav-right">
                     <div class="lang-switcher">
                         <button class="lang-btn${currentLang === 'en' ? ' active' : ''}" id="lang-btn-en" aria-label="Switch to English">
                             <img src="assets/images/flag_uk.svg" alt="English">
@@ -46,6 +51,12 @@ function renderSiteShell() {
                             <img src="assets/images/flag_bg.svg" alt="Bulgarian">
                         </button>
                     </div>
+                    
+                    <button class="hamburger" id="hamburger-menu" aria-label="Toggle Navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </nav>
         `;
@@ -72,17 +83,21 @@ function renderSiteShell() {
         const btnBg = document.getElementById("lang-btn-bg");
 
         function updateLangUI(lang) {
-            localStorage.setItem("portfolio-lang", lang);
+            try {
+                localStorage.setItem("portfolio-lang", lang);
+            } catch (e) {
+                console.warn("Storage write restricted:", e);
+            }
             if (lang === "bg") {
                 document.documentElement.classList.add("lang-bg");
                 document.documentElement.setAttribute("lang", "bg");
-                btnBg.classList.add("active");
-                btnEn.classList.remove("active");
+                if (btnBg) btnBg.classList.add("active");
+                if (btnEn) btnEn.classList.remove("active");
             } else {
                 document.documentElement.classList.remove("lang-bg");
                 document.documentElement.setAttribute("lang", "en");
-                btnEn.classList.add("active");
-                btnBg.classList.remove("active");
+                if (btnEn) btnEn.classList.add("active");
+                if (btnBg) btnBg.classList.remove("active");
             }
             updatePageTitle(lang);
         }
@@ -125,7 +140,13 @@ function updatePageTitle(lang) {
 
 document.addEventListener("DOMContentLoaded", () => {
     // Sync language state on DOM load
-    const savedLang = localStorage.getItem("portfolio-lang") || "en";
+    let savedLang = "en";
+    try {
+        savedLang = localStorage.getItem("portfolio-lang") || "en";
+    } catch (e) {
+        console.warn("Storage access restricted on DOM load:", e);
+    }
+    
     if (savedLang === "bg") {
         document.documentElement.classList.add("lang-bg");
         document.documentElement.setAttribute("lang", "bg");
