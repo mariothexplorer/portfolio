@@ -106,7 +106,7 @@ function scalePhone() {
 
     const scale = isMobile ? Math.min(scaleByWidth, 1) : Math.min(scaleByHeight, scaleByWidth, 1);
 
-    phone.style.transform = `scale(${scale})`;
+    phone.style.transform = `translateX(-50%) scale(${scale})`;
     phone.style.transformOrigin = "top center";
 
     const wrapper = phone.parentElement;

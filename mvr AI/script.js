@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    // Check if embedded in an iframe
+    if (window.self !== window.top) {
+        document.body.classList.add('embedded');
+    }
+
     // Lock screen elements
     const preLockScreen = document.querySelector('.pre-lock-screen');
     const lockScreen = document.querySelector('.lock-screen');

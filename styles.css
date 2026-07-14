@@ -8,6 +8,7 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #0f172a;
     color: #f1f5f9;
+    overflow-x: hidden;
 }
 
 
@@ -318,9 +319,9 @@ body.loaded {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 60px;
     width: 100%;
-    margin-top: -100px;
+    margin-top: 20px;
 }
 
 /* Phone wrapper */
@@ -328,7 +329,8 @@ body.loaded {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    flex: none;
+    position: relative;
 }
 
 /* iPhone outer frame */
@@ -338,7 +340,9 @@ body.loaded {
     border-radius: 55px;
     overflow: hidden;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-    position: relative;
+    position: absolute;
+    left: 50%;
+    transform-origin: top center;
 }
 
 /* Screen */
@@ -370,7 +374,7 @@ body.loaded {
 
 .webapp-bottom-text {
     width: 100%;
-    margin-top: -80px;
+    margin-top: 40px;
     padding-bottom: 60px;
     position: relative;
     z-index: 2;
@@ -636,19 +640,19 @@ img, video, iframe {
     }
 
     .webapp-phone-wrapper {
-        display: block;
-        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         overflow: visible;
-        margin: 10px auto;
+        margin: 20px auto;
     }
 
     .iphone-frame {
-        margin: 0 auto;
         transform-origin: top center;
     }
 
     .webapp-bottom-text {
-        margin-top: 20px;
+        margin-top: 40px;
         padding-bottom: 40px;
         text-align: center;
     }
