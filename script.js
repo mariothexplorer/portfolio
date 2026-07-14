@@ -62,6 +62,7 @@ function renderSiteShell() {
 document.addEventListener("DOMContentLoaded", () => {
     renderSiteShell();
     document.body.classList.add("loaded");
+    scalePhone();
 
     document.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", function (e) {
@@ -118,3 +119,4 @@ function scalePhone() {
 
 window.addEventListener("load", scalePhone);
 window.addEventListener("resize", scalePhone);
+scalePhone();
