@@ -1,0 +1,678 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+
+
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #f1f5f9;
+}
+
+.nav-links a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #cbd5e1;
+    position: relative;
+    font-size: 14px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #f1f5f9;
+}
+
+.nav-links a.active {
+    font-weight: 600;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+    background-color: #60a5fa;
+}
+
+/* underline hover */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #3b82f6;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px;
+    gap: 80px;
+}
+
+/* ARCH IMAGE */
+
+.hero-image img {
+    width: 320px;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 160px 160px 0 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* TEXT */
+
+.hero-text {
+    max-width: 500px;
+}
+
+.label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #3b82f6;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+/* CIRCLES */
+
+.circle-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+/* COLORS */
+
+.lavender {
+    background: #1e293b;
+}
+
+.blue {
+    background: #2563eb;
+}
+
+.pink {
+    background: #0ea5e9;
+}
+
+.green {
+    background: #10b981;
+}
+
+.slate {
+    background: #334155;
+}
+
+/* HOVER ANIMATION */
+
+.circle:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* PAGE LAYOUT */
+
+.page {
+    padding: 80px 60px;
+    max-width: 80%;
+    margin: auto;
+}
+
+.page h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.page-intro {
+    color: #94a3b8;
+    margin-bottom: 60px;
+}
+
+/* PROJECT */
+
+.project {
+    margin-bottom: 80px;
+}
+
+.project h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.project h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin-top: 8px;
+}
+
+.project:nth-of-type(1) h2::after {
+    background: #0ea5e9;
+    /* blue */
+}
+
+.project:nth-of-type(2) h2::after {
+    background: #10b981;
+    /* green */
+}
+
+.project:nth-of-type(3) h2::after {
+    background: #2563eb;
+    /* blue */
+}
+
+.project:nth-of-type(4) h2::after {
+    background: #1e293b;
+    /* slate */
+}
+
+.project:nth-of-type(5) h2::after {
+    background: #ec4899;
+    /* pink */
+}
+
+body {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+body.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.project-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.project-video {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.project p {
+    color: #94a3b8;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.project-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.project-text {
+    flex: 1;
+}
+
+.project-media {
+    flex: 1.8;
+}
+
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* DOWNLOAD */
+
+.download {
+    font-size: 16px;
+    color: #3b82f6;
+    text-decoration: underline;
+    text-decoration-thickness: 25%;
+    text-underline-offset: 10px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.download:hover {
+    color: #60a5fa;
+    letter-spacing: 0.2px;
+}
+
+/* WEB APP PAGE */
+
+.webapp-section {
+    padding: 0px 60px 0 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.webapp-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+    margin-top: -100px;
+}
+
+/* Phone wrapper */
+.webapp-phone-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+/* iPhone outer frame */
+.iphone-frame {
+    width: 430px;
+    height: 880px;
+    border-radius: 55px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+/* Screen */
+.iphone-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 48px;
+    display: block;
+}
+
+/* Description */
+.webapp-text {
+    max-width: 450px;
+    flex: 1;
+}
+
+.webapp-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.webapp-text p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.webapp-bottom-text {
+    width: 100%;
+    margin-top: -80px;
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.webapp-bottom-text p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* FLAPPY BIRD SPECIFIC LAYOUT */
+
+.flappy-content .project-media {
+    flex: 0 0 345px;
+    max-width: 100%;
+}
+
+.flappy-video {
+    width: 100%;
+    display: block;
+}
+
+.flappy-download {
+    display: block;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 60px 60px 40px;
+    font-size: 13px;
+    color: #64748b;
+    border-top: 1px solid #1e293b;
+    margin-top: 40px;
+}
+
+/* HAMBURGER MENU BUTTON */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #f1f5f9;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hamburger active transformation */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* GLOBAL RESPONSIVE MEDIA RULES */
+img, video, iframe {
+    max-width: 100%;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+    /* NAVBAR */
+    .navbar {
+        padding: 16px 24px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(15, 23, 42, 0.96);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid #1e293b;
+        padding: 24px;
+        gap: 16px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        font-size: 16px;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .nav-links a.active {
+        color: #60a5fa;
+        font-weight: 600;
+    }
+
+    /* GENERAL PAGE STRUCTURE */
+    .page {
+        padding: 40px 20px;
+        max-width: 100%;
+    }
+
+    .page h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .page-intro {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 14px;
+    }
+
+    .project {
+        margin-bottom: 50px;
+    }
+
+    .project h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .project h2::after {
+        margin: 8px auto 0 auto;
+    }
+
+    .project p {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .project > p:first-of-type {
+        text-align: center;
+    }
+
+    .project-content {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .project-media {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-text {
+        width: 100%;
+    }
+
+    .project-text p {
+        text-align: left; /* Keep descriptions readable but details can be normal */
+    }
+
+    /* HERO SECTION (index.html) */
+    .hero {
+        flex-direction: column-reverse;
+        padding: 40px 24px;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 240px;
+        height: 390px;
+        border-radius: 120px 120px 0 0;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+
+    .description {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .circle-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .circle {
+        width: 75px;
+        height: 75px;
+        font-size: 12px;
+    }
+
+    /* WEB APP PAGE (webapp.html) */
+    .webapp-section {
+        padding: 16px 20px 0 20px;
+    }
+
+    .webapp-container {
+        flex-direction: column-reverse;
+        gap: 40px;
+        margin-top: 0;
+    }
+
+    .webapp-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .webapp-text h1 {
+        font-size: 32px;
+    }
+
+    .webapp-phone-wrapper {
+        display: block;
+        width: 100%;
+        overflow: visible;
+        margin: 10px auto;
+    }
+
+    .iphone-frame {
+        margin: 0 auto;
+        transform-origin: top center;
+    }
+
+    .webapp-bottom-text {
+        margin-top: 20px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer {
+        padding: 40px 24px 30px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra adjustments for very small screens */
+    .fp-iframe {
+        height: 240px !important;
+        margin: 1rem auto !important;
+    }
+
+    .circle-buttons {
+        gap: 8px;
+    }
+
+    .circle {
+        width: 68px;
+        height: 68px;
+        font-size: 11px;
+    }
+}
