@@ -138,13 +138,12 @@ function updatePageTitle(lang) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Sync language state on DOM load
+function initPage() {
     let savedLang = "en";
     try {
         savedLang = localStorage.getItem("portfolio-lang") || "en";
     } catch (e) {
-        console.warn("Storage access restricted on DOM load:", e);
+        console.warn("Storage access restricted on init:", e);
     }
     
     if (savedLang === "bg") {
@@ -159,6 +158,10 @@ document.addEventListener("DOMContentLoaded", () => {
     updatePageTitle(savedLang);
     document.body.classList.add("loaded");
     scalePhone();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    initPage();
 
     document.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", function (e) {
@@ -224,7 +227,9 @@ function scalePhone() {
 
 window.addEventListener("load", scalePhone);
 window.addEventListener("resize", scalePhone);
-window.addEventListener("pageshow", scalePhone);
+window.addEventListener("pageshow", (event) => {
+    initPage();
+});
 document.addEventListener("readystatechange", () => {
     if (document.readyState === "complete" || document.readyState === "interactive") {
         scalePhone();
