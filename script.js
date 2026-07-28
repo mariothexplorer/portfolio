@@ -110,8 +110,14 @@ function renderSiteShell() {
 
     if (footerTarget) {
         footerTarget.innerHTML = `
-            <span lang="en">&copy; Mario Petrov</span>
-            <span lang="bg">&copy; Марио Петров</span>
+            <div>
+                <span lang="en">&copy; Mario Petrov</span>
+                <span lang="bg">&copy; Марио Петров</span>
+            </div>
+            <div style="margin-top: 8px;">
+                <a href="https://www.linkedin.com/in/mariothexplorer" target="_blank" rel="noopener noreferrer" lang="en">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/mariothexplorer" target="_blank" rel="noopener noreferrer" lang="bg">LinkedIn</a>
+            </div>
         `;
     }
 }
