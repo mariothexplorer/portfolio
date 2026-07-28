@@ -236,6 +236,16 @@ h1 {
     /* pink */
 }
 
+.project:nth-of-type(6) h2::after {
+    background: #8b5cf6;
+    /* purple/violet */
+}
+
+.project:nth-of-type(7) h2::after {
+    background: #f97316;
+    /* orange */
+}
+
 body {
     opacity: 0;
     transform: translateY(8px);
@@ -404,6 +414,14 @@ body.loaded {
 .flappy-download {
     display: block;
     margin-top: 10px;
+}
+
+/* TRANSLATOR & DOODLE SPECIFIC LAYOUT */
+
+.translator-content .project-media,
+.doodle-content .project-media {
+    flex: 0 0 345px;
+    max-width: 100%;
 }
 
 /* FOOTER */

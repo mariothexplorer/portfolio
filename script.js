@@ -174,7 +174,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (this.classList.contains("download") || 
                     this.hasAttribute("download") || 
                     href.toLowerCase().endsWith(".exe") || 
-                    href.toLowerCase().endsWith(".zip")) {
+                    href.toLowerCase().endsWith(".zip") || 
+                    href.toLowerCase().endsWith(".apk")) {
                     return;
                 }
 
