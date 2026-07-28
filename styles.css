@@ -1025,6 +1025,61 @@ img, video, iframe {
         height: 68px;
         font-size: 11px;
     }
+
+    /* Mobile (very small) tweaks to make the homepage feel balanced and avoid content being hidden */
+    body.home-page {
+        padding-bottom: 96px; /* safe area for browser UI and footer */
+    }
+
+    .hero {
+        padding-top: 12px;
+        padding-bottom: 8px;
+    }
+
+    .hero-title h1 {
+        font-size: 26px;
+        line-height: 1.05;
+        margin-bottom: 8px;
+    }
+
+    .hero-image img {
+        width: 160px !important;
+        height: 240px !important;
+        border-radius: 80px 80px 0 0;
+    }
+
+    .profile-link {
+        margin-top: 8px;
+        margin-bottom: 6px;
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .description {
+        padding: 0 18px;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-top: 6px;
+    }
+
+    .circle-buttons {
+        justify-content: center;
+        gap: 10px;
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+
+    .circle {
+        width: 62px;
+        height: 62px;
+        font-size: 11px;
+    }
+
+    .skills-row {
+        justify-content: center;
+        padding: 0 12px 18px;
+        gap: 8px;
+    }
 }
 
 /* Reduce bottom padding and footer margin specifically for webapp page on desktop */
