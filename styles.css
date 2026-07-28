@@ -420,8 +420,14 @@ body.loaded {
 
 .translator-content .project-media,
 .doodle-content .project-media {
-    flex: 0 0 345px;
+    flex: 0 0 240px;
     max-width: 100%;
+}
+
+.translator-content .project-video,
+.doodle-content .project-video {
+    max-width: 240px;
+    margin: 0 auto;
 }
 
 /* FOOTER */
