@@ -1092,15 +1092,45 @@ img, video, iframe {
 
     body.home-page .hero-title { order: 1; }
     body.home-page .hero-image { order: 2; }
-    body.home-page .hero-image img { width: 150px !important; height: 220px !important; }
-    body.home-page .profile-link { order: 3; margin-top: 8px; }
-    body.home-page .hero-body { order: 4; padding: 6px 14px; }
-    body.home-page .circle-buttons { order: 5; flex-wrap: nowrap; justify-content: center; gap: 8px; padding: 8px 12px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    body.home-page .circle { width: 58px !important; height: 58px !important; }
-    body.home-page .skills-row { order: 6; padding-bottom: 20px; }
+    /* stronger overrides to prevent other rules from taking precedence */
+    body.home-page .hero-image img {
+        width: 150px !important;
+        height: 220px !important;
+        max-width: 80% !important;
+        border-radius: 80px 80px 0 0 !important;
+    }
+    body.home-page .profile-link {
+        order: 3 !important;
+        margin-top: 8px !important;
+        display: inline-block !important;
+    }
+    body.home-page .hero-body { order: 4 !important; padding: 6px 14px !important; }
+    body.home-page .circle-buttons {
+        order: 5 !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        padding: 8px 12px !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        width: 100% !important;
+    }
+    body.home-page .circle {
+        width: 58px !important;
+        height: 58px !important;
+        min-width: 58px !important;
+        flex: 0 0 auto !important;
+    }
+    body.home-page .skills-row { order: 6 !important; padding-bottom: 20px !important; }
 
     /* Make sure footer space doesn't cover content on mobile */
     body.home-page { padding-bottom: 110px !important; }
+
+    /* Hide duplicate language anchor that may show alongside the active one */
+    html:not(.lang-bg) .hero-image [lang="bg"],
+    html.lang-bg .hero-image [lang="en"] {
+        display: none !important;
+    }
 }
 
 /* Reduce bottom padding and footer margin specifically for webapp page on desktop */
