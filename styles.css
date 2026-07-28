@@ -1080,6 +1080,27 @@ img, video, iframe {
         padding: 0 12px 18px;
         gap: 8px;
     }
+
+    /* Force mobile ordering and sizes for the home page to ensure consistent layout */
+    body.home-page .hero {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        padding-top: 10px !important;
+    }
+
+    body.home-page .hero-title { order: 1; }
+    body.home-page .hero-image { order: 2; }
+    body.home-page .hero-image img { width: 150px !important; height: 220px !important; }
+    body.home-page .profile-link { order: 3; margin-top: 8px; }
+    body.home-page .hero-body { order: 4; padding: 6px 14px; }
+    body.home-page .circle-buttons { order: 5; flex-wrap: nowrap; justify-content: center; gap: 8px; padding: 8px 12px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    body.home-page .circle { width: 58px !important; height: 58px !important; }
+    body.home-page .skills-row { order: 6; padding-bottom: 20px; }
+
+    /* Make sure footer space doesn't cover content on mobile */
+    body.home-page { padding-bottom: 110px !important; }
 }
 
 /* Reduce bottom padding and footer margin specifically for webapp page on desktop */
